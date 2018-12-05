@@ -1,0 +1,127 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Contenido -->
+<div class="container-wrap">		
+	<div id="fh5co-blog">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="fh5co-blog animate-box">
+					<a href="{% static 'core/images/Terapia_individual.jpg' %}" class="blog-bg" style="background-image: url({% static 'core/images/Terapia_individual.jpg' %}); background-size: 100%;    
+							-moz-background-size: 100%;  
+					  		-o-background-size: 100%;   
+					 		-webkit-background-size: 100%;  
+					   		-khtml-background-size: 100%; ">"></a>
+					<div class="blog-text">
+						<h3>Terapia Individual</h3>
+						<p align="justify">A través de la terapia individual y con la utilización de técnicas alternativas, tú
+							podrás mejorar la calidad de vida, tener mejores relaciones sociales y poder
+							establecer vínculos de bienestar contigo mism@ para que superes tus miedos,
+							fobias, ansiedades, duelos, temores y de esta manera; soltar de una vez por
+							todas, las cargas que no te pertenecen y poder vivir tu vida con plenitud y sin
+							culpas. Esta terapia puede ser presencial o en línea.</p>
+						<ul class="stuff">
+							<li><a href="{% url 'individual_therapy' %}">Terapia individual<i class="icon-heart3"></i></a></li>
+						</ul>
+					</div> 
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="fh5co-blog animate-box">
+					<a href="{% static 'core/images/Terapia_pareja.jpg' %}" class="blog-bg" style="background-image: url({% static 'core/images/Terapia_pareja.jpg' %}); background-size: 100%;    
+							-moz-background-size: 100%;  
+					  		-o-background-size: 100%;   
+					 		-webkit-background-size: 100%;  
+					   		-khtml-background-size: 100%; "></a>
+					<div class="blog-text">
+						<h3>Terapia de pareja</h3>
+						<p align="justify">Puedes mejorar los vínculos con tu pareja a través de una buena comunicación,
+							respeto y armonía. Este tipo de terapias son breves para que resuelvas los
+							problemas que te aquejan dentro de tu relación. Contar con las herramientas
+							adecuadas te ayudará a mejorar problemas de autoestima, culpabilidad y saber
+							poner los límites adecuados de acuerdo a las situaciones que han estado
+							presentes en tu relación. El objetivo es que tanto tu pareja como tú puedan
+							reconocerse a sí mismos y empezar una vida nueva a través de generar una
+							transformación para estar mejor y que puedan re crear sus vínculos afectivos y
+							emocionales.</p>
+						<ul class="stuff">
+							<li><a href="{% url 'couple_therapy' %}">Terapia de pareja<i class="icon-heart3"></i></a></li>
+						</ul>
+					</div> 
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="fh5co-blog animate-box">
+					<a href="{% static 'core/images/Terapia_ grupal.jpg' %}" class="blog-bg" style="background-image: url({% static 'core/images/Terapia_ grupal.jpg' %}); background-size: cover; background-position: center;"></a>
+					<div class="blog-text">
+						<h3>Terapia Grupal</h3>
+						<p align="justify">A través de la terapia grupal, puedes socializar y también te ayuda para tener una contención con otras personas, que al igual que tú, desean tener una vida más plena, vivir con dignidad y sobre todo, tomar consciencia  de las situaciones que te aquejan. Tú cuentas con el apoyo necesario para darte cuenta que las cosas siempre pasan por algo y reconocer que de toda una situación que consideres negativa, vienen a tu camino cosas buenas y de todo ello, te llevas una experiencia y un crecimiento interno. 
+							El objetivo de la terapia grupal es darte cuenta, sobre todo, que tú no estás sol@ y que cuentas con un grupo que te puede ayudar a estar y sentirte mejor.</p>
+						<ul class="stuff">
+							<li><a href="{% url 'group_therapy' %}">Terapia grupal<i class="icon-heart3"></i></a></li>
+						</ul>
+					</div>
+				</div> 
+			</div>
+			<div class="col-md-4">
+				<div class="fh5co-blog animate-box">
+					<a href="{% static 'core/images/Terapia_niños.jpg' %}" class="blog-bg" style="background-image: url({% static 'core/images/Terapia_niños.jpg' %}); background-size: cover; background-position: center;"></a>
+					<div class="blog-text">
+						<h3>Terapia para niños</h3>
+						<p align="justify">Este tipo de terapia ayuda al bienestar de tus hijos para que puedan crecer con
+							seguridad y bienestar con ellos mismos. Al tratarse de niños, el procedimiento
+							terapéutico no puede ser el mismo que se aborda con los adultos ya que su
+							mirada y forma de ver el mundo es diferente. Un niño no puede entender
+							claramente cuando sus padres se separan o cuando no existe en su vida una
+							figura materna o paterna; es necesario saber abordar estas situaciones con los
+							infantes para que puedan desarrollar todas sus capacidades tanto creativas como
+							de bienestar interno y adaptarse mejor a las circunstancias de la vida.</p>
+						<ul class="stuff">
+							<li><a href="{% url 'childrens_therapy' %}">Terapia para niños<i class="icon-heart3"></i></a></li>
+						</ul>
+					</div>
+				</div> 
+			</div>
+			<div class="col-md-4">
+				<div class="fh5co-blog animate-box">
+					<a href="{% static 'core/images/Terapia_adolescentes.jpg' %}" class="blog-bg" style="background-image: url({% static 'core/images/Terapia_adolescentes.jpg' %}); background-size: cover; background-position: center;"></a>
+					<div class="blog-text">
+						<h3>Terapia para adolecentes</h3>
+						<p align="justify">Por medio de diversas herramientas terapéuticas tanto individuales como grupales
+							y talleres, se resuelven problemas de conducta en adolescentes, ansiedades,
+							miedos, temores, escolares y de integración social para fomentar el sano
+							desarrollo en los jóvenes. Este tipo de terapia se puede llevar a cabo ya sea de
+							manera presencial o en línea.</p>
+						<ul class="stuff">
+							<li><a href="{% url 'teenagers_therapy' %}">Terapia para adolecentes<i class="icon-heart3"></i></a></li>
+						</ul>
+					</div>
+				</div> 
+			</div>
+			<div class="col-md-4">
+				<div class="fh5co-blog animate-box">
+					<a href="{% static 'core/images/Servicios_comunidad.jpg' %} " class="blog-bg" style="background-image: url({% static 'core/images/Servicios_comunidad.jpg' %}); background-size: cover; background-position: center;"></a>
+					<div class="blog-text">
+						<h3>Servicios a la comunidad</h3>
+						<p align="justify">Realizamos talleres de diversos temas de interés para fomentar en desarrollo
+							personal y colectivo de manera gratuita. Asimismo llevamos a cabo talleres
+							especiales para la comunidad LGTB+ con la finalidad de hacer trabajos de
+							contención y la mejora en las relaciones de pareja, familiares, laborales y sociales.
+							El objetivo primordial es lograr el bienestar de los individuos y socializar los
+							problemas para dar una solución a los mismos por medio de la comunicación y
+							diversas técnicas terapéuticas y de esta manera, lograr un bien común para
+							fortalecer los lazos tanto afectivos como sociales en determinadas circunstancias
+							que afectan a las personas.</p>
+						<ul class="stuff">
+							<li><a href="{% url 'community_service' %}">Servicios a la comunidad<i class="icon-heart3"></i></a></li>
+						</ul>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+</div><!-- END container-wrap -->
+{% endblock %}
+
+

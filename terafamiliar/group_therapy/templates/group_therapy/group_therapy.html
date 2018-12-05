@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Contenido -->
+	{% for group_therapy in group_therapies %}
+		<div class="container-wrap">		
+			<div id="fh5co-blog">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="fh5co-blog animate-box">
+							<h3>{{group_therapy.title}}</h3>
+							<a href="{{group_therapy.image.url}}" class="blog-bg" style="background-image: url({{group_therapy.image.url}});"></a>
+							<div class="blog-text">
+								<h3>{{group_therapy.subtitle}}</h3>
+								<p>{{group_therapy.content|safe}}</p>
+								<ul class="stuff">
+									<li><a href="{% url 'contact' %}">Llámame<i class="icon-heart3"></i></a></li>
+								</ul>
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- END container-wrap -->
+	{% endfor %}
+{% endblock %}	

@@ -1,0 +1,130 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+<!--<img src="{% static 'core/images/logo_luz.png' %}"  height="50px"/>-->
+
+{% block content %}
+<!-- Contenido -->
+<div class="container-wrap">
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul class="slides">
+			<li style="background-image: url({% static 'core/images/img_bg_1.jpg' %});">
+				<div class="overlay-gradient"></div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 slider-text">
+							<div class="slider-text-inner">
+								<h1>TERAFAMILIAR</h1>
+									<h2>Constelaciones  |  Terapias</a></h2>
+									<p><a class="btn btn-primary btn-demo" href="{% url 'contact' %}"></i>Llamame</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background-image: url({% static 'core/images/flag2.jpg' %});">
+				<div class="overlay-gradient"></div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-push-3 slider-text">
+							<div class="slider-text-inner">
+								<h1>Servicios LGTB+</h1>
+									<h2>Sin distinción alguna  |  En cualquier momento</a></h2>
+									<p><a class="btn btn-primary btn-demo" href="{% url 'lgtb' %}"></i>Leer más</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background-image: url({% static 'core/images/Servicios_comunidad.jpg' %}); background-size: cover; background-position: center;">
+				<div class="overlay-gradient"></div>
+				<div class="container-fluids">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 slider-text">
+							<div class="slider-text-inner text-center">
+								<h1>Servicios a la comunidad</h1>
+									<h2>En general <a href="https://es.wikipedia.org/wiki/Comunidad">  |  Comunidad</a></h2>
+									<p><a class="btn btn-primary btn-learn" href="{% url 'community_service' %}">Leer más</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background-image: url({% static 'core/images/Terapia_individual.jpg' %}); background-size: cover; background-position: center;">
+				<div class="overlay-gradient"></div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-push-3 slider-text">
+							<div class="slider-text-inner">
+								<h1>Terapias individuales</h1>
+									<h2>Estoy para ayudarte<a href="{% url 'individual_therapy' %}">  |  Terapia Individual</a></h2>
+									<p><a class="btn btn-primary btn-demo" href="{% url 'testimonials' %}"></i>Testimoniales</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>	   	
+			</ul>
+		</div>
+	</aside>
+
+	<!-- Mision - Vision - About -->
+	<div id="fh5co-services">
+		<div class="row">
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<i class="icon-diamond"></i>
+					</span>
+					<div class="desc">
+						<h3>Mision</h3>
+						<p align="justify">Establecer lazos de ayuda a las personas sin ningún tipo de distinción ya sea por
+							edad, raza, religión y preferencias sexuales. Somos profesionales en el ámbito del
+							crecimiento interno para fortalecer las relaciones humanas y tener una mejor
+							calidad de vida a través de terapias alternativas (Constelaciones Familiares,
+							Masoterapia, Terapia de Flores, Talleres, Terapia Gestalt y Cartas Astrales para
+							dar una mirada a los problemas que de manera particular que atañen al individuo.
+							Establecemos trabajos conjuntos con diversos grupos y organizaciones no civiles
+							con la finalidad de brindar nuestros servicios en favor a la colectividad y de esta
+							manera, hacer redes de ayuda a las personas que más lo necesitan sin fines
+							lucrativos. Nuestro lema es: “Construir para ser mejor”.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<i class="icon-lab2"></i>
+					</span>
+					<div class="desc">
+						<h3>Vision</h3>
+						<p align="justify">Impulsar el desarrollo a los sectores de la población a través de grupos de trabajo
+							tanto en lo individual como en lo colectivo por medio de terapias alternativas que
+							ayuden al fortalecimiento interno de las personas para su crecimiento y bienestar
+							interior. Hacer trabajos en lo colectivo a la comunidad en general y los grupos de
+							personas que pertenecen al sector de LGTB+ para coadyuvar al crecimiento
+							personal a través de grupos de contención, cursos y talleres para el crecimiento
+							interno de las personas.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<a href="{% url 'about' %}"><i class="icon-settings"></i></a>
+					</span>
+					<div class="desc">
+						<h3><a href="{% url 'about' %}">¿Quienes somos?</a></h3>
+						<p align="justify">Somos un grupo de terapeutas comprometidas con el bienestar tanto individual como colectivo en busca del crecimiento de las personas para la superación de obstáculos y situaciones adversas. No aceptamos ningún tipo de donación ni vinculación con otro tipo de organismos ya sea políticos o empresas, debido a que somos personas independientes que -ante todo- ponemos nuestra experiencia y conocimiento para ayudar a las personas que necesiten apoyo terapéutico y de contención en casos que así lo requieran los individuos o grupos sociales.</p>						
+						<p align="right">
+							<a href="{% url 'about' %}">Leer más<br><i class="icon-heart3"></a></i>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- END container-wrap -->
+{% endblock %}	

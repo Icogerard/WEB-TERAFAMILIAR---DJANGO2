@@ -1,0 +1,65 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Contenido -->
+<div class="container-wrap">		
+	<div id="fh5co-contact">
+		<div class="row animate-box">
+			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+				<h2>INFORMACIÓN</h2>
+				<p>Horarios de Atención Previa Cita: de Lunes a Viernes 9 a 2  y de 4 a 9 pm.
+						Sábados y Domingos Previa Cita horario abierto.<br>Si deseas hacer una cita puedes hacerlo mediante la página o enviar un mensaje a través de Whatsapp:<br><strong>55 29 11 80 18 (Mtra. Adela Mabarak) 
+					<br>55 29 55 12 37 (Terapeuta Irene Cava)</strong>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-md-push-1 animate-box">
+				<h3>Información</h3>
+				<ul class="contact-info">
+					<li><i class="icon-location4"></i>Coyoacán México D.F.</li>
+					<li><i class="icon-phone3"></i>5658-0641<br>(044-55)2911-8018</li>
+					<li><i class="icon-location3"></i><a href="info@terafalimiar.org">info@terafamiliar.org</a></li>
+					<li><i class="icon-globe2"></i><a href="http://www.terafamiliar.org">www.terafamiliar.org</a></li>
+				</ul>
+			</div>
+			<!--Formulario-->
+			<div class="col-md-7 col-md-push-1 animate-box">
+				<div class="row">
+					{% if 'ok' in request.GET %}
+						<p class="text-center"><img src="{% static 'core/images/logo_luz.ico' %}"><br><span style="color: rgba(44, 2, 0, 0.473);"><strong>MENSAJE ENVIADO | ME PONDRE EN CONTACTO A LA BREVEDAD</strong></span></P>
+					{% endif %}
+					<form action ="" method="POST">
+						{% csrf_token %}
+						<div class="col-md-6">
+							<div class="form-group">
+								{{form.name}}
+							</div>
+							{{form.name.errors}}
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								{{form.email}}
+							</div>
+							{{form.email.errors}}
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								{{form.content}}
+							</div>
+							{{form.content.errors}}
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="submit" value="Enviar" class="btn btn-primary btn-modify">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--Formulario FIN-->
+		</div>
+	</div>
+</div><!-- END container-wrap -->
+{% endblock %}

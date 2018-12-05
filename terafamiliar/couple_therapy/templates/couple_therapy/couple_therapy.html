@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Contenido -->
+	{% for couple_therapy in couples_therapies %}
+		<div class="container-wrap">		
+			<div id="fh5co-blog">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="fh5co-blog animate-box">
+							<h3>{{couple_therapy.title}}</h3>
+							<a href="{{couple_therapy.image.url}}" class="blog-bg" style="background-image: url({{couple_therapy.image.url}});"></a>
+							<div class="blog-text">
+								<h3>{{couple_therapy.subtitle}}</h3>
+								<p>{{couple_therapy.content|safe}}</p>
+								<ul class="stuff">
+									<li><a href="{% url 'contact' %}">Llámame<i class="icon-heart3"></i></a></li>
+								</ul>
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- END container-wrap -->
+	{% endfor %}
+{% endblock %}	

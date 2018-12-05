@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+	<!-- 
+	ENNCANIA-SOLUTIONS
+	YumKimil
+	Website: 		http://www.gvaldez.xyz/
+	Email: 			gvaldez@probit.com.mx
+	Twitter: 		http://twitter.com/yumkimil
+	Facebook: 		https://www.facebook.com/yumkimil
+	 -->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TeraFamiliar | México</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Desarrollado por ENNCANIA-SOLUTIONS | YumKimil" />
+	<meta name="keywords" content="website, html5, bootstrap, css3, responsivo" />
+	<meta name="author" content="http://www.gvaldez.xyz" />
+
+	{% load static %}
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link href="{% static 'core/css/animate.css' %}" rel="stylesheet">
+	<!-- Icomoon Icon Fonts-->
+	<link href="{% static 'core/css/icomoon.css' %}" rel="stylesheet">
+	<!-- Bootstrap  -->
+	<link href="{% static 'core/css/bootstrap.css' %}" rel="stylesheet">
+	<!-- Magnific Popup -->
+	<link href="{% static 'core/css/magnific-popup.css' %}" rel="stylesheet">
+	<!-- Flexslider  -->
+	<link href="{% static 'core/css/flexslider.css' %}" rel="stylesheet">
+	<!-- Theme style  -->
+	<link href="{% static 'core/css/style.css' %}" rel="stylesheet">
+	<!-- Modernizr JS -->
+	<script src="{% static 'core/js/modernizr-2.6.2.min.js' %}"></script>
+	</head>
+		
+	<body>
+
+	<div class="fh5co-loader"></div>
+	<div id="page">
+	<!-- Menú de Navegación -->
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container-wrap">
+			<div class="top-menu">
+				<div class="row">
+					<div class="col-xs-4">
+						<div id="fh5co-logo">
+							<a href="{% url 'home' %}"><span style="color:black; text-align: left">TeraFamiliar</span><img src="{% static 'core/images/logo_luz.png' %}"  height="50px"/></a>
+						</div>
+					</div>
+					<div class="col-xs-8 text-right menu-1">
+						<ul>
+							<li class="{% if request.path == '/' %}active{% endif %}"> <a href="{% url 'home' %}">Inicio</a></li>
+							<li class="has-dropdown {% if request.path == '/services/' %}active{% endif %}"> <a href="{% url 'services' %}">Servicios</a>
+								<ul class="dropdown">
+									<li><a href="{% url 'individual_therapy' %}">Terapia individual</a></li>
+									<li><a href="{% url 'couple_therapy' %}">Terapia de pareja</a></li>
+									<li><a href="{% url 'group_therapy' %}">Terapia grupal</a></li>
+									<li><a href="{% url 'childrens_therapy' %}">Terapia para niños</a></li>
+									<li><a href="{% url 'teenagers_therapy' %}">Terapia Adolescentes</a></li>
+									<li><a href="{% url 'community_service' %}">Servicios a la comunidad</a></li>
+								</ul>
+							<li class="{% if request.path == '/lgtb/' %}active{% endif %}"> <a href="{% url 'lgtb' %}"><img src="{% static 'core/images/lgtb3.ico' %}">Servicios LGTB+</a></li>						
+							<li class="{% if request.path == '/testimonials/' %}active{% endif %}"> <a href="{% url 'testimonials' %}">Testimoniales</a></li>
+							<li class="{% if request.path == '/contact/' %}active{% endif %}"> <a href="{% url 'contact' %}">Contacto</a></li>	
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	
+
+	<!-- Contenido -->
+	{% block content %}{% endblock %}
+
+	<!-- Pie de página -->
+	<!-- Footer -->
+	<footer>		
+	<div class="row copyright">
+		<div class="col-md-12 text-center">
+			<p>
+				<small class="block">&copy; 2018. Todos los derechos resevrados.<br></small> 
+				<small class="block">|Desarrollo <a href="http://www.gvaldez.xyz/" target="_blank">YumKimil</a> |Disponible <a href="http://www.gvaldez.xyz/" target="_blank">Encania-Solutions</a> |Repositorio <a href="https://github.com/Icogerard" target="_blank">GitHub</a></small>
+			</p>
+			<p>
+				<ul class="fh5co-social-icons">	
+					{% if LINK_TWITTER %}<li><a href="{{LINK_TWITTER}}"><i class="icon-twitter"></i></a></li>{% endif %}
+					{% if LINK_INSTAGRAM %}<li><a href="{{LINK_INSTAGRAM}}"><i class="icon-instagram"></i></a></li>{% endif %}
+					{% if LINK_FACEBOOK %}<li><a href="{{LINK_FACEBOOK}}"><i class="icon-facebook"></i></a></li>{% endif %}
+					{% if LINK_LINKEDIN %}<li><a href="{{LINK_LINKEDIN}}"><i class="icon-linkedin"></i></a></li>{% endif %}
+					{% if LINK_YOUTUBE %}<li><a href="{{LINK_YOUTUBE}}"><i class="icon-youtube"></i></a></li>{% endif %}
+				</ul>
+			</p>
+		</div>
+	</div>
+	</footer>
+	
+	</body>
+
+	<!-- Flecha para subir -->
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{% static 'core/js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'core/js/jquery.waypoints.min.js' %}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'core/js/jquery.flexslider-min.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'core/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'core/js/magnific-popup-options.js' %}"></script>
+	<!-- Counters -->
+	<script src="{% static 'core/js/jquery.countTo.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'core/js/main.js' %}"></script>
+
+</html>
+

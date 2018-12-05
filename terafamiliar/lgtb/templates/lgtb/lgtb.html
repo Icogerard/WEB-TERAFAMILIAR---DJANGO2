@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-wrap">
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul class="slides">
+			<li style="background-image: url({% static 'core/images/flag2.jpg' %});">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 slider-text slider-text-bg">
+						<div class="slider-text-inner text-center">
+							<h1>Servicios LGTB+</h1>
+							<h2>Servicios LGTB+ para toda la comunidad<a href="{% url 'contact' %}"> |   Comunicate</a></h2>
+						</div>
+					</div>
+				</div>
+			</li>		   	
+			</ul>
+		</div>
+	</aside>
+</div ><!-- END container-wrap -->
+
+<div class="container-wrap text-center">www.terafamiliar.org</div>
+
+{% for lgtb in lgtbs %}
+<div class="container-wrap">	
+		<div id="fh5co-blog">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="blog-text slider-text-bg">
+						<h3>{{lgtb.title}}</h3>
+						<p>{{lgtb.content|safe}}</p>	
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div><!-- END container-wrap -->
+{% endfor %}
+
+{% endblock %}
+

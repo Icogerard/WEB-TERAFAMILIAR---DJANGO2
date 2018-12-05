@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Contenido -->
+	{% for post in posts %}
+		<div class="container-wrap">
+		<div id="fh5co-work">
+			<div class="row">
+				<div class="col-md-8 text-center animate-box">
+					<div class="contenedor">
+						<video class="blog-bg" src="{{post.video.url}}" width="620" height="320" controls preload></video>
+					</div>
+						<br><strong><h8 class="fh5co-project-title">{{post.title}}</h8></strong> | <spam class="fh5co-project-sub">{{post.subtitle}}</spam>	
+				</div>
+				<div class="col-md-4 fh5co-project-detail">
+					<p>{{post.content|safe}}</p>
+					<div class="fh5co-project-service">
+						<h8>INFORMACION</h8>
+						<ul>
+							<li>Publicado por | {{post.author}}</li>
+							<li>Categoria(s) | {% for category in post.categories.all %}<a href="{% url 'category' category.id %}">{{category.name}}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+							<li>Fecha de publicación(s) | {{post.published}}</li>
+						</ul>
+					</div>
+					<hr>
+				</div>
+			</div>
+		</div>
+		</div><!-- END container-wrap -->
+	{% endfor %}
+{% endblock %}
+
